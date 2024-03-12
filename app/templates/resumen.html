@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resumen de compra</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estiloPrincipal.css')}}">
+        <script src="{{url_for('static', filename='js/funcion.js')}}"></script>
+    </head>
+    <body id="resumen">
+        <form class="formulario">
+            <div class="titulos">
+                <h3>Resumen de la compra: </h3>
+            </div>
+            <table class="tablaResumen">
+                <tr>
+                    <td><p>{{ data.nombre }}</p></td>
+                    <td><p>{{ data.apellido }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>{{ data.tipoDoc }}</p></td>
+                    <td><p>{{ data.numDoc }}</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p>{{ data.email }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Celular: </p></td>
+                    <td><p>{{ data.celular }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>{{ data.producto }}</p></td>
+                    <td><p>{{ data.cantidad }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Pago: </p></td>
+                    <td><p>{{ data.metodoPago }}</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p>{{ data.direccionEntrega }}</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p>{{ data.ciudad }}</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p>{{ data.descripcionExtra }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Propina: </p></td>
+                    <td><p>{{ data.propina }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Prioritario: </p></td>
+                    <td><p>{{ data.envioPrioritario }}</p></td>
+                </tr>
+                <tr>
+                    <td><p>Total: </p></td>
+                    <td><p>{{ data.totalGuardado }}</p></td>
+                </tr>
+            </table>
+            <div class="botones-container">
+                <button type="button" class="botonVol" id="volver"><- Volver</button>
+            </div>
+            
+        </form>
+    </body> 
+</html>

@@ -1,0 +1,182 @@
+p, h3, h6, input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+.titulos{
+    text-align: center;
+    font-size: 18px;
+    color: #154734;    
+}
+
+input, textarea{
+    width: 98%;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 16px;
+}
+input:focus, textarea:focus{
+    border-bottom: 2px solid #154734;
+    
+}
+textarea{
+    height: 10%;
+}
+select{
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    width: 30%;
+
+}
+.tablaCiudad{
+    width: 100%;
+}
+
+.tablaOpcion{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.tablaOpcion td{
+    padding-bottom: 10%;
+}
+.tablaProducto{
+    width: 100%;
+}
+.tablaProducto input[type="number"]{
+    width: 40px;
+}
+
+.tablaResumen{
+    width: 100%;
+    border: 3px solid;
+    margin: 0 auto;
+    text-align: center;
+    border-color: #154734;
+}
+
+.tablaResumen td:nth-child(2){
+    text-align: left;
+}
+datalist {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #154734;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    font-family: sans-serif;
+    width: auto;
+    max-width: 350px;
+    padding: 5px;
+    max-height: 90%;
+    overflow-y: auto;
+    z-index: 1; 
+}
+option {
+    background-color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+option:hover, .active {
+    background-color: #154734;
+    color: white;
+}
+button{
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.botones-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botonSig,
+.botonVol {
+    width: calc(50% - 5px); 
+    background-color: white;
+    font-size: 17px;
+    padding: 5px 10px;
+    border: 1px solid;
+    transition-duration: 0.4s;
+}
+
+.botonSig:hover {
+    background-color: #154734;
+    color: white;
+    box-shadow: 0 2px 5px 0 #858585;
+}
+
+.botonVol:hover {
+    background-color: #0096A0;
+    color: white;
+    box-shadow: 0 2px 5px 0 #858585;
+}
+
+.placeholder-rojo::placeholder {
+    color: red;
+}
+
+@media only screen and (max-width: 500px) and (max-height: 1000px) {
+    .formulario {
+        width: 80%;
+        left: 9%; 
+        top: initial; 
+        transform: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario p {
+        padding: 6px;
+    }
+
+    input {
+        width: 90%; 
+        font-size: 90%; 
+        margin-bottom: 10px; 
+    }
+
+    select {
+        width: 90%; 
+        font-size: 90%; 
+    }
+
+    .botones-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px; 
+    }
+
+    .botonSig,
+    .botonVol {
+        width: auto; 
+        background-color: white;
+        font-size: 17px;
+        padding: 5px 10px;
+        border: 1px solid;
+        transition-duration: 0.4s;
+    }
+
+    body {
+        margin: 0; 
+        padding: 0;
+    }
+}

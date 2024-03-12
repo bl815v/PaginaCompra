@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datos de Envio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estiloPrincipal.css')}}">
+        <script src="{{url_for('static', filename='js/funcion.js')}}"></script>
+    </head>
+    <body id="datosEnvio">
+        <form class="formulario" method="POST" action="/resumen">
+            <div class="titulos">
+            <h3>Datos de envio: </h3>
+            </div>
+            <table class="tablaCiudad">
+                <tr>
+                    <td>
+                        <p>Ciudad: </p>
+                    </td>
+                    <td>
+                        <select id="ciudad" name="ciudad">
+                            <option value="Bogota D.C">Bogota D.C</option>
+                            <option value="Cartagena">Cartagena</option>
+                            <option value="Medellin">Medellin</option>
+                            <option value="Tunja">Tunja</option>
+                            <option value="Cucuta">Cucuta</option>
+                        </select>
+                    </td>
+                </tr>    
+            </table>
+            <p>Direccion de entrega: </p>
+            <input type="text" id="dirEntrega" name="dirEntrega" placeholder="Ingrese su direccion..." required>
+            <p>Descripcion extra: </p>
+            <textarea id="descEntrega" name="descEntrega" maxlength="60" required></textarea><br>
+            <table class="tablaOpcion">
+                <tr>
+                    <td><input type="checkbox" id="propina" name="propina"></td>
+                    <td><label for="propina">Propina</label><br></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="prioritario" name="prioritario"></td>
+                    <td><label for="prioritario">Envio prioritario</label></td>
+                </tr>
+            </table>
+            <div class="botones-container">
+                <button type="button" class="botonVol" id="volver"><- Volver</button>
+                <button type="submit" class="botonSig" id="sig">Confirmar compra</button>
+            </div>
+            
+        </form>
+    </body> 
+</html>    

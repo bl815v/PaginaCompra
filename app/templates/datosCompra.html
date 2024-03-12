@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datos de compra</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estiloPrincipal.css')}}">
+        <script src="{{url_for('static', filename='js/funcion.js')}}"></script>
+    </head>
+    <body id="datosCompra">
+        <form class="formulario" method="POST" action="/datosEnvio">
+            <div class="titulos">
+            <h3>Datos de compra: </h3>
+            </div>
+            <p>Producto: </p>
+            <table class="tablaProducto">
+                <tr>
+                    <td>
+                        <input list="" id="producto" name="producto" placeholder="Ingrese el nombre del producto..." autocomplete="off" role="combobox" required>
+                        <datalist id="productos" name="productos" role="listbox">
+
+                        </datalist>
+                    </td>
+                    <td>
+                        <input type="number" id="cantidad" name="cantidad" placeholder="0" min="1" max="17" step="1" required>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><p>Precio: $ </p></td>
+                    <td><p id="precio"></p></td>
+                </tr>
+            </table>
+            
+            <p>Metodo de pago: </p>
+            <table>
+                <tr>
+                    <td><input type="radio" name="metodoPago" id="efectivo" value="Efectivo" required></td>
+                    <td><label for="efectivo">Efectivo</label></td>
+                    <td><input type="radio" name="metodoPago" id="tarjeta" value="Tarjeta"></td>
+                    <td><label for="tarjeta">Tarjeta</label></td>
+                    <td><input type="radio" name="metodoPago" id="pse" value="PSE"></td>
+                    <td><label for="pse">PSE</label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><p>Total a pagar: $ </p></td>
+                    <td><p id="totalPagar"></p></td>
+                </tr>
+            </table>
+            <div class="botones-container">
+                <button type="button" class="botonVol" id="volver"><- Volver</button>
+                <button type="submit" class="botonSig" id="sig">Confirmar compra</button>
+            </div>
+        </form>
+    </body> 
+</html>    
